@@ -1,0 +1,350 @@
+* {
+    padding : 0;
+    margin : 0;
+}
+
+body {
+    font-family: 'Manrope',sans-serif;
+    background-color: hsl(230, 100%, 99%);
+    background-image: url('./images/bg-pattern.svg');
+    background-repeat: no-repeat;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-block : 7em 2em;
+}
+
+.pattern {
+    position: absolute;
+    top : 4em;
+    z-index: -1;
+}
+
+.header > h1 {
+    font-size: 20px;
+    color:  hsl(227, 35%, 25%);
+    margin-bottom: 1em;
+}
+
+.header > div > p {
+    color :  hsl(225, 20%, 60%);
+    margin-bottom: .5em;
+    text-align: center;
+}
+
+.bodyContainer {
+    background-color: #fff;
+    border-radius: 10px;
+    padding : 20px;
+    text-align: center;
+    margin-inline : 1.5em;
+    margin-bottom: 5em;
+}
+
+.pageView {
+    color : hsl(225, 20%, 60%);
+    font-weight: 600;
+    margin-bottom: 2em ;
+    letter-spacing : 3px;
+    font-weight: 800;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    background-color: hsl(174, 77%, 80%);
+    border-radius: 50px;
+    width : 100%;
+    height : 10px;
+    outline : none;
+    margin-bottom: 2.5em;
+}
+
+input[type=range]::-moz-range-thumb {
+    -webkit-appearance: none;
+    background-image: url('./images/icon-slider.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color:  hsl(174, 86%, 45%);
+    width : 40px;
+    height : 40px;
+    border-radius: 50px;
+    border : none;
+    cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb:hover {
+    box-shadow: 0px 0px 10px  hsl(174, 86%, 45%);
+}
+
+/* for google chrome */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-image: url('./images/icon-slider.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color:  hsl(174, 86%, 45%);
+    width : 40px;
+    height : 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border : none;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+    box-shadow: 0px 0px 10px  hsl(174, 86%, 45%);
+}
+
+
+input[type=range]::-ms-track {
+    background : transparent;
+    border-color: transparent;
+    color: hsl(224, 65%, 95%);
+}
+
+.priceContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.priceContainer > .dollar, .priceValue {
+    font-size: 40px;
+    color : hsl(227, 35%, 25%);
+    font-weight: 800;
+}
+
+.month {
+    color : hsl(225, 20%, 60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+
+.toggleContainer {
+    margin-block: 2em 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.toggleContainer > p {
+    color : hsl(225, 20%, 60%);
+    font-size: 12px;
+    font-weight: 600;
+    font-family: 'Manrope',sans-serif;
+}
+
+.discountDesktop {
+    display: none;
+}
+
+.toggleLabel {
+    position: relative;
+    display: inline-block;
+    bottom : 3px;
+    width: 54px;
+    height : 26px;
+}
+
+.toggleLabel input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggleCheck {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(223, 50%, 87%);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 40px;
+}
+
+.toggleCheck:before {
+    position: absolute;
+    content: "";
+    height : 20px;
+    width: 20px;
+    top : 3px;
+    left: 5px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .toggleCheck {
+    background-color: #2196F3;
+}
+
+input:focus + .toggleCheck {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .toggleCheck:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.discount {
+    background-color: hsl(14, 92%, 95%);
+    padding : 5px 7px;
+    border: none;
+    border-radius: 50px;
+    color: hsl(15, 100%, 70%);
+    font-size: 10px;
+    font-weight: 600;
+    position: relative;
+    left : 5px;
+    bottom : 3px;
+}
+
+hr {
+    color : hsl(225, 20%, 60%);
+    opacity: 0.3;
+    margin : -20px;
+}
+
+.bottomSection {
+    padding-top: 40px;
+}
+
+.list {
+    display: flex;
+    justify-content: center;
+    margin-block : 1em;
+}
+
+.list > img {
+    margin-right :15px;
+    margin-top: 5px;
+    width : 10px;
+    height : 10px;
+}
+
+.list > p {
+    color : hsl(225, 20%, 60%);
+    font-size: 15px;
+}
+
+button {
+    margin-top: 1em;
+    border : none;
+    border-radius: 50px;
+    background-color:  hsl(227, 35%, 25%);
+    color : hsl(226, 100%, 87%);
+    font-weight: 600;
+    padding : 15px;
+    width : 200px;
+    cursor: pointer;
+}
+
+button:hover {
+    color : white;
+}
+
+@media screen and (min-width : 1200px) {
+    .header {
+        margin-bottom: 5em;
+    }
+
+    .header > div {
+        display: flex;
+    }
+
+    .header > div > p:nth-last-child(1) {
+        margin-left : 5px;
+    }
+
+    .bodyContainer {
+        width: 540px;
+        padding : 40px;
+        margin : 0 auto;
+        text-align: left;
+        margin-bottom: 150px;
+    }
+
+    .sliderContainer {
+        margin-top: 30px;
+        display: grid;
+        grid-column: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        position: relative;
+    }
+
+    .pageView {
+        order: 1;
+        position: absolute;
+    }
+
+    .priceContainer {
+        order: 2;
+        position: relative;
+        left : 10em;
+        bottom : 1.7em;
+    }
+
+    .slider {
+        order : 3;
+        margin-top: 20px;
+    }
+
+    .toggleContainer {
+        justify-content: end;
+        gap: 1em;
+    }
+
+    hr {
+        margin : -40px;
+        margin-top: 40px;
+    }
+
+    .discount {
+        display: none;
+    }
+
+    .discountDesktop {
+        display: block;
+        background-color: hsl(14, 92%, 95%);
+        padding : 5px 7px;
+        border: none;
+        border-radius: 50px;
+        color: hsl(15, 100%, 70%);
+        font-size: 10px;
+        font-weight: 600;
+        position: relative;
+        left : 5px;
+        bottom : 3px;
+    }
+
+    .bottomSection {
+        margin-top: 1em;
+        display: flex;
+        justify-content: space-around;
+   }
+
+    .list {
+        display: grid;
+        grid-template-columns: 20px 1fr;
+    }
+
+    button {
+       height : 40px;
+       width : 170px;
+       position: relative;
+       top : 3.3em;
+       margin-top: 0;
+       padding : 0;
+    }
+}
